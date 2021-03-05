@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+        <changeSet  author="shawon"  id="change">
+            <createTable tableName="person">
+                <column autoIncrement="true" name="id" type="BIGINT(255)">
+                    <constraints primaryKey="true"/>
+                </column>
+                <column name="name" type="VARCHAR(255)"/>
+                <column name="email" type="VARCHAR(255)"/>
+                <column name="phone_number" type="VARCHAR(255)"/>
+            </createTable>
+        </changeSet>
+        <changeSet author="shawon1" id="change 1.0">
+             <addColumn tableName="person">
+                 <column name="address" type="varchar(255)" />
+             </addColumn>
+        </changeSet>
+</databaseChangeLog>
